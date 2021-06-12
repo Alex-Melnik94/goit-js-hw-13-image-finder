@@ -9,6 +9,7 @@ import { error } from '@pnotify/core';
 const listEl = document.querySelector('.js-gallery')
 const formEl = document.querySelector('#search-form')
 const loadMoreBtn = document.querySelector('.load-more-btn')
+const scrollToEl = document.querySelector('.scroll-div')
 
 
 const apiService = new ApiService()
@@ -51,11 +52,13 @@ function onBtnClick() {
    
     apiService.incrementPage()
     apiService.fetchImgs().then(renderMarkup).then(r => {
-        const itemEl = document.querySelector('.js-gallery li:nth-last-child(12)')
-        itemEl.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        });
+        setTimeout(() => {
+            scrollToEl.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            });
+        }, 300)
+        
       })
 }
 

@@ -16,11 +16,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 }
 
 body {
   background: #ecf0f3;
-  // color: wheat;
 }
 
 .visually-hidden {
@@ -59,20 +59,21 @@ body {
 }
 
 .gallery-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  width: calc((100% - 60px) / 4);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 }
 
-.gallery-item:nth-child(3n) {
+.gallery-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.gallery-item:nth-last-child(-n + 3) {
+.gallery-item:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
 
@@ -80,6 +81,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  font-size: 14px;
 }
 
 .stats-item {
@@ -95,7 +97,7 @@ body {
 }
 
 .material-icons {
-  margin-right: 8px;
+  margin-right: 3px;
 }
 
 .form-input {
